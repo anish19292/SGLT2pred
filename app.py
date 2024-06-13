@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 import smtplib
 from email.message import EmailMessage
 
-st.set_page_config(page_title="SerotoninAI")
+st.set_page_config(page_title="SGLT2pred")
 
 #background of webpage
 page_bg_img = f"""
