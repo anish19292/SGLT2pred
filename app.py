@@ -41,6 +41,3 @@ background: rgba(0,0,0,0);
 </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
-# Set page configuration
-st.set_page_config(page_title="SGLT2predictor")
