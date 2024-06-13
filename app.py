@@ -84,7 +84,7 @@ custom_css = """
 
 st.markdown(custom_css, unsafe_allow_html=True)
 #main title
-st.markdown('<h1 class="text-gradient-title">SerotoninAI</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="text-gradient-title">SGLT2pred</h1>', unsafe_allow_html=True)
 
 
 success_style = """
