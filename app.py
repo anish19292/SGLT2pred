@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 import smtplib
 from email.message import EmailMessage
 
-st.set_page_config(page_title="SGLT2pred")
+st.set_page_config(page_title="SGLT2predictor")
 
 #background of webpage
 page_bg_img = f"""
@@ -41,3 +41,44 @@ background: rgba(0,0,0,0);
 </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# Define custom CSS for styling
+custom_css = """
+<style>
+    :root {
+        font-size: 20px;
+        text-align: justify;
+    }
+    .text-second-title {
+        font-size: 40px;
+        text-align: left;
+        color: #525354;
+    }
+
+    @keyframes text-gradient-title {
+        0% { color: #FFD700; }
+        50% { color: #91b3bd; }
+        100% { color: #FFD700; }
+    }
+
+    .text-gradient-title {
+        position: sticky;
+        top: 0px;
+        animation: text-gradient-title 4s ease-in-out infinite;
+        font-size: 130px;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        font-style: italic;
+    }
+    .centered-image {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+"""
+
+# Apply custom CSS
+st.markdown(custom_css, unsafe_allow_html=True)
+
+# Display the main title
+st.markdown('<h1 class="text-gradient-title">SGLT2predictor</h1>', unsafe_allow_html=True)
