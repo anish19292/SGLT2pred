@@ -21,3 +21,23 @@ from streamlit_ketcher import st_ketcher
 import matplotlib.pyplot as plt
 import smtplib
 from email.message import EmailMessage
+
+st.set_page_config(page_title="SerotoninAI")
+
+#background of webpage
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+background-image: url("https://raw.githubusercontent.com/nczub/APP/2475af8d4e836424e301f5829c83cbbf8632d2dc/background_14_07_2023.svg");
+background-size: cover;
+background-position: top;
+#background-repeat: repeat;
+background-attachment: local;
+}}
+[data-testid="stHeader"] {{
+background: rgba(0,0,0,0);
+
+}}
+</style>
+"""
+st.markdown(page_bg_img, unsafe_allow_html=True)
