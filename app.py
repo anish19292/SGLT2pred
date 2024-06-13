@@ -46,22 +46,19 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 def clear_text():
     st.session_state["text"] = ""
 
+# Import necessary packages
+import streamlit as st
+
+# Set page configuration
+st.set_page_config(page_title="SGLT2pred")
+
+# Define custom CSS for styling
 custom_css = """
 <style>
-    :root {
-        font-size: 20px;
-        text-align: justify;
-    }
-    .text-second-title {
-        font-size: 40px;
-        text-align: left;
-        color: #525354;
-    }
-
     @keyframes text-gradient-title {
-        0% { color: grey; }
+        0% { color: #FFD700; }
         50% { color: #91b3bd; }
-        100% { color: grey; }
+        100% { color: #FFD700; }
     }
 
     .text-gradient-title {
@@ -73,51 +70,11 @@ custom_css = """
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         font-style: italic;
     }
-    .centered-image {
-        display: flex;
-        justify-content: center;
-    }
-    </style>
-
 </style>
 """
 
+# Apply custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
-#main title
+
+# Display the main title
 st.markdown('<h1 class="text-gradient-title">SGLT2pred</h1>', unsafe_allow_html=True)
-
-
-success_style = """
-    background-color: #b0d1e0;
-    color: #525354;
-    border-radius: 10px;
-    padding: 10px;
-    width: 80px;
-    fontSize: 25px;
-    animation-name: fadeOut;
-    animation-duration: 5s;
-"""
-
-#footer
-footer_style = """
-    position: fixed;
-    left: 0;
-    z-index: 3;
-    bottom: 0;
-    width: 100%;
-    color: #525354;
-    font-style: italic;
-    text-align: left;
-    padding: 10px;
-    font-size: 16px;
-"""
-st.markdown(
-    f'<div style="{footer_style}">Copyright (C) 2024 Natalia Łapińska (Czub)</div>',
-    unsafe_allow_html=True
-)
-
-if st.session_state.get('switch_button', False):
-    st.session_state['menu_option'] = (st.session_state.get('menu_option', 0) + 1) % 2
-    manual_select = st.session_state['menu_option']
-else:
-    manual_select = None
