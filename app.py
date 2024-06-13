@@ -42,6 +42,10 @@ background: rgba(0,0,0,0);
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
+# Set page configuration
+st.set_page_config(page_title="SerotoninAI")
+
+# Define custom CSS for styling
 custom_css = """
 <style>
     :root {
@@ -55,9 +59,9 @@ custom_css = """
     }
 
     @keyframes text-gradient-title {
-        0% { color: grey; }
+        0% { color: #FFD700; }
         50% { color: #91b3bd; }
-        100% { color: grey; }
+        100% { color: #FFD700; }
     }
 
     .text-gradient-title {
@@ -73,23 +77,11 @@ custom_css = """
         display: flex;
         justify-content: center;
     }
-    </style>
-
 </style>
 """
 
+# Apply custom CSS
 st.markdown(custom_css, unsafe_allow_html=True)
-#main title
+
+# Display the main title
 st.markdown('<h1 class="text-gradient-title">SerotoninAI</h1>', unsafe_allow_html=True)
-
-
-success_style = """
-    background-color: #b0d1e0;
-    color: #525354;
-    border-radius: 10px;
-    padding: 10px;
-    width: 80px;
-    fontSize: 25px;
-    animation-name: fadeOut;
-    animation-duration: 5s;
-"""
