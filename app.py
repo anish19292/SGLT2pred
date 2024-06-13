@@ -28,7 +28,7 @@ st.set_page_config(page_title="SerotoninAI")
 page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://raw.githubusercontent.com/nczub/APP/2475af8d4e836424e301f5829c83cbbf8632d2dc/background_14_07_2023.svg");
+background-image: url("https://raw.githubusercontent.com/anish19292/SGLT2pred/main/vecteezy_abstract-medical-concept-with-molecule-pattern-background_7355270.jpg");
 background-size: cover;
 background-position: top;
 #background-repeat: repeat;
